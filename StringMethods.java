@@ -1,0 +1,77 @@
+package com.stringmethods;
+public class StringMethods {
+	public static void main(String []args)
+	{
+		String s ="Hai Welcome to Strings";
+		System.out.println(s);
+		String s1 = new String("Welcome");
+		System.out.println(s1);
+		byte b[] = {65,66,67,68,69,70,71,72,73,74,75};
+		String s2 = new String(b);
+		System.out.println(s2);
+		String s3 = new String(b,1,6);
+		System.out.println(s3);
+		char ch[] = {'a','b','c','d','e','f','g','h'};
+		String s4 = new String(ch);
+		System.out.println(s4);
+		String s5 = new String(ch,0,5);
+		System.out.println(s5);
+		String s6 = new String("Welcome");
+		System.out.println(s6);
+		int x = s6.length();
+		System.out.println("Length of a String :"+x);
+		String w1 = "Java";
+		String w2 = " is a Programming Language";
+		String w3 =  w1.concat(w2);
+		System.out.println(w3);
+		String h1="Hello";
+		String h2=h1.toUpperCase();
+		System.out.println(h2);
+		String h3 = h1.toLowerCase();
+		System.out.println(h3);
+		String s7 = "Java";
+		String s8 = "JAVA";
+		Boolean bool1 = s7.equals(s8);
+		System.out.println(bool1);
+		Boolean bool2 = s7.equalsIgnoreCase(s8);
+		System.out.println(bool2);
+		String s9=" How are you ";
+		String s10 = s9.trim();
+		System.out.println(s9);
+		System.out.println(s10);
+		System.out.println(w3);
+		String s11 = w3.substring(1,10);
+		System.out.println(s11);
+		String s12 = "Learn Share Learn";
+		int s13 = s12.indexOf("Learn",7);
+		System.out.println(s13);
+		String s14 = "J a va is a pr gramming";
+		String s15 = s14.replaceAll("\\s","");
+		System.out.println(s15);
+		String s16 = w3.replace("Programming","high level Programming Language");
+		System.out.println(s16);
+		int i=10;
+		String i1 = String.valueOf(i);
+		System.out.println(i1);
+		long l=20;
+		String l1=String.valueOf(l);
+		System.out.println(l1);
+		System.out.println(l);
+		float f=10.30f;
+		String f1=String.valueOf(f);
+		System.out.println(f1);
+		double d=542.36;
+		String d1=String.valueOf(d);
+		System.out.println(d1);
+		char c='a';
+		String c1=String.valueOf(c);
+		System.out.println(c1);
+		char ch1[] = {'a','b','c','d','e','f'};
+		String ch2 = String.valueOf(ch1,2,4);
+		System.out.println(ch2);
+		boolean booleanvalue=true;
+		String stringboolvalue=String.valueOf(booleanvalue);
+		System.out.println(stringboolvalue);
+	}
+
+}
