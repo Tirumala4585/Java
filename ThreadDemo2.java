@@ -1,9 +1,10 @@
 package com.threadprograms;
 
-public class ThreadDemo2 implements Runnable{
+class Odd extends Thread{
 	public void run() {
 		for(int i=1;i<=10;i++) {
-			System.out.println(Thread.currentThread().getName()+" I = "+i);
+		    if(i%2!=0)
+			System.out.println(this.getName()+" I = "+i);
 			try {
 				Thread.sleep(1000);
 			}
@@ -12,24 +13,34 @@ public class ThreadDemo2 implements Runnable{
 			}
 		}
 	}
+}
+class Even extends Thread{
+    public void run() {
+	for(int i=1;i<=10;i++) {
+	   if(i%2==0)
+	       System.out.println(this.getName()+" I = "+i);
+	    try {
+		Thread.sleep(1500);
+	    }
+	    catch(InterruptedException ie) {
+			ie.printStackTrace();
+	     }
+	 }
+   }
+}
+public class ThreadDemo2{		
 	public static void main(String []args) {
-		ThreadDemo2 obj = new ThreadDemo2();
-		Thread t = new Thread(obj);
-        t.setName("Thread1");
-		t.start();
-		Thread t1 = Thread.currentThread();
-		t1.setName("Thread2");
-		for(int i=1;i<=10;i++)
-		{
-			System.out.println(t1.getName()+" I = "+i);
-			try {
-				Thread.sleep(1000);
-			}
-			catch(InterruptedException ie) {
-				ie.printStackTrace();
-			}
-		}
+		Odd obj1 = new Odd();
+		obj1.start();
+		obj1.setName("Odd");
+		
+		
+		Even obj2 = new Even();
+		obj2.start();
+		obj2.setName("Even");
 		
 	}
-
 }
+
+		
+	
